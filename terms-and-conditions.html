@@ -1,442 +1,580 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeAds - Terms &amp; Conditions</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        :root {
-            --primary-color: #00ACC1;
-            --primary-dark: #00838F;
-            --secondary-color: #FF6B6B;
-            --text-dark: #212121;
-            --text-light: #757575;
-            --bg-light: #F5F5F5;
-            --white: #FFFFFF;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
+      :root {
+        --primary-color: #00acc1;
+        --primary-dark: #00838f;
+        --secondary-color: #ff6b6b;
+        --text-dark: #212121;
+        --text-light: #757575;
+        --bg-light: #f5f5f5;
+        --white: #ffffff;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
 
+      body {
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f7fa 0%, #f5f5f5 100%);
+        color: var(--text-dark);
+        line-height: 1.6;
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        background: var(--primary-color);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .app-name {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--text-dark);
+      }
+
+      .tagline {
+        color: var(--text-light);
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      /* Main Content */
+      .content-card {
+        background: var(--white);
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid var(--primary-color);
+        display: inline-block;
+      }
+
+      .intro-text {
+        background: linear-gradient(135deg, #e0f7fa 0%, #f0f4f8 100%);
+        padding: 20px;
+        border-radius: 12px;
+        border-left: 4px solid var(--primary-color);
+        margin-bottom: 24px;
+        font-size: 15px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: var(--text-dark);
+        font-size: 15px;
+      }
+
+      /* Lists */
+      ul {
+        list-style: none;
+        margin: 16px 0;
+      }
+
+      ul li {
+        padding: 12px 0 12px 32px;
+        position: relative;
+        color: var(--text-dark);
+        font-size: 15px;
+      }
+
+      ul li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      /* Highlight boxes */
+      .highlight-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .info-box {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .warning-box {
+        background: #ffebee;
+        border-left: 4px solid var(--secondary-color);
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .alert-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      /* Links */
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
+      /* Contact section */
+      .contact-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--primary-dark) 100%
+        );
+        color: var(--white);
+        padding: 32px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: var(--shadow-hover);
+        margin-top: 24px;
+      }
+
+      .contact-section h3 {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+
+      .contact-section a {
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.2);
+        padding: 12px 24px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-section a:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        text-decoration: none;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 24px;
+        color: var(--text-light);
+        font-size: 14px;
+      }
+
+      /* Effective date badge */
+      .effective-date {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 16px 0;
+      }
+
+      /* Category tags (like in the app) */
+      .tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+        justify-content: center;
+      }
+
+      .tag {
+        background: var(--bg-light);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: var(--text-dark);
+        border: 1px solid #e0e0e0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
         body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #E0F7FA 0%, #F5F5F5 100%);
-            color: var(--text-dark);
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
+          padding: 12px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
+        .content-card {
+          padding: 20px;
         }
 
-        /* Header */
         .header {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--white);
-            box-shadow: var(--shadow);
+          padding: 20px;
         }
 
         .app-name {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--text-dark);
+          font-size: 24px;
         }
 
-        .tagline {
-            color: var(--text-light);
-            font-size: 16px;
-            margin-top: 8px;
-        }
-
-        /* Main Content */
-        .content-card {
-            background: var(--white);
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            margin-bottom: 20px;
+        .logo {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
         }
 
         .section-title {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 3px solid var(--primary-color);
-            display: inline-block;
+          font-size: 20px;
         }
+      }
 
-        .intro-text {
-            background: linear-gradient(135deg, #E0F7FA 0%, #F0F4F8 100%);
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 24px;
-            font-size: 15px;
-        }
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
 
-        p {
-            margin-bottom: 16px;
-            color: var(--text-dark);
-            font-size: 15px;
-        }
+      /* Section spacing */
+      .section {
+        margin-bottom: 32px;
+      }
 
-        /* Lists */
-        ul {
-            list-style: none;
-            margin: 16px 0;
-        }
-
-        ul li {
-            padding: 12px 0 12px 32px;
-            position: relative;
-            color: var(--text-dark);
-            font-size: 15px;
-        }
-
-        ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        /* Highlight boxes */
-        .highlight-box {
-            background: #FFF9E6;
-            border-left: 4px solid #FFC107;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        .info-box {
-            background: #E8F5E9;
-            border-left: 4px solid #4CAF50;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        .warning-box {
-            background: #FFEBEE;
-            border-left: 4px solid var(--secondary-color);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        .alert-box {
-            background: #FFF3E0;
-            border-left: 4px solid #FF9800;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        /* Links */
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
-        }
-
-        /* Contact section */
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 32px;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-hover);
-            margin-top: 24px;
-        }
-
-        .contact-section h3 {
-            margin-bottom: 12px;
-            font-size: 24px;
-        }
-
-        .contact-section a {
-            color: var(--white);
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-section a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 24px;
-            color: var(--text-light);
-            font-size: 14px;
-        }
-
-        /* Effective date badge */
-        .effective-date {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 8px 20px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 500;
-            margin: 16px 0;
-        }
-
-        /* Category tags (like in the app) */
-        .tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin: 16px 0;
-            justify-content: center;
-        }
-
-        .tag {
-            background: var(--bg-light);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            color: var(--text-dark);
-            border: 1px solid #E0E0E0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 12px;
-            }
-
-            .content-card {
-                padding: 20px;
-            }
-
-            .header {
-                padding: 20px;
-            }
-
-            .app-name {
-                font-size: 24px;
-            }
-
-            .logo {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-
-            .section-title {
-                font-size: 20px;
-            }
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Section spacing */
-        .section {
-            margin-bottom: 32px;
-        }
-
-        strong {
-            color: var(--primary-dark);
-        }
+      strong {
+        color: var(--primary-dark);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo-section">
-                <div class="logo">W</div>
-                <h1 class="app-name">WeAds</h1>
-            </div>
-            <p class="tagline">Together we soar</p>
-            <div class="tags">
-                <span class="tag">Terms</span>
-                <span class="tag">Conditions</span>
-                <span class="tag">Legal</span>
-            </div>
+      <!-- Header -->
+      <div class="header">
+        <div class="logo-section">
+          <div class="logo">W</div>
+          <h1 class="app-name">WeAds</h1>
+        </div>
+        <p class="tagline">Together we soar</p>
+        <div class="tags">
+          <span class="tag">Terms</span>
+          <span class="tag">Conditions</span>
+          <span class="tag">Legal</span>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content-card">
+        <h2 class="section-title">Terms &amp; Conditions</h2>
+
+        <div class="intro-text">
+          These terms and conditions apply to the <strong>WeAds</strong> app
+          (hereby referred to as "Application") for mobile devices that was
+          created by Smit Sakariya (hereby referred to as "Service Provider") as
+          a Free service.
         </div>
 
-        <!-- Main Content -->
-        <div class="content-card">
-            <h2 class="section-title">Terms &amp; Conditions</h2>
-            
-            <div class="intro-text">
-                These terms and conditions apply to the <strong>WeAds</strong> app (hereby referred to as "Application") for mobile devices that was created by Smit Sakariya (hereby referred to as "Service Provider") as a Free service.
-            </div>
+        <div class="effective-date">Effective as of February 1, 2026</div>
 
-            <div class="effective-date">Effective as of February 1, 2026</div>
-
-            <!-- Agreement -->
-            <div class="section">
-                <div class="warning-box">
-                    <h4 style="color: #D32F2F; margin-bottom: 12px;">⚠️ Important Agreement</h4>
-                    <p>Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application.</p>
-                </div>
-            </div>
-
-            <!-- Intellectual Property -->
-            <div class="section">
-                <h3 class="section-title">Intellectual Property</h3>
-                <p>Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider.</p>
-            </div>
-
-            <!-- Service Modifications -->
-            <div class="section">
-                <h3 class="section-title">Service Modifications</h3>
-                <p>The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As such, they reserve the right to modify the Application or charge for their services at any time and for any reason. The Service Provider assures you that any charges for the Application or its services will be clearly communicated to you.</p>
-            </div>
-
-            <!-- Data Security -->
-            <div class="section">
-                <h3 class="section-title">Data Security &amp; Device Safety</h3>
-                <p>The Application stores and processes personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Application.</p>
-                
-                <div class="alert-box">
-                    <h4 style="color: #E65100; margin-bottom: 12px;">⚡ Device Security Warning</h4>
-                    <p>The Service Provider strongly advises against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could:</p>
-                    <ul>
-                        <li>Expose your phone to malware and viruses</li>
-                        <li>Introduce malicious programs</li>
-                        <li>Compromise your phone's security features</li>
-                        <li>May result in the Application not functioning correctly or at all</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Third Party Services -->
-            <div class="section">
-                <h3 class="section-title">Third-Party Services</h3>
-                <div class="info-box">
-                    <h4 style="color: #388E3C; margin-bottom: 12px;">🔗 External Services</h4>
-                    <p>Please note that the Application utilizes third-party services that have their own Terms and Conditions. Below are the links to the Terms and Conditions of the third-party service providers used by the Application:</p>
-                    
-                    <ul>
-                        <li><a href="https://www.google.com/analytics/terms/" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
-                        <li><a href="https://firebase.google.com/terms/crashlytics" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Internet Connection -->
-            <div class="section">
-                <h3 class="section-title">Internet Connection Requirements</h3>
-                <p>Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Application does not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance.</p>
-
-                <div class="highlight-box">
-                    <h4 style="color: #F57C00; margin-bottom: 12px;">📱 Data Usage Notice</h4>
-                    <p>If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for:</p>
-                    <ul>
-                        <li>Data usage during the connection to the application</li>
-                        <li>Other third-party charges</li>
-                        <li>Roaming data charges if you use the application outside of your home territory (i.e., region or country) without disabling data roaming</li>
-                    </ul>
-                    <p style="margin-top: 12px;"><strong>By using the application, you accept responsibility for any such charges.</strong> If you are not the bill payer for the device on which you are using the application, it is assumed that you have obtained permission from the bill payer.</p>
-                </div>
-            </div>
-
-            <!-- Device Responsibility -->
-            <div class="section">
-                <h3 class="section-title">Device Responsibility</h3>
-                <p>Similarly, the Service Provider cannot always assume responsibility for your usage of the application. For instance, it is your responsibility to ensure that your device remains charged. If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible.</p>
-            </div>
-
-            <!-- Accuracy & Reliability -->
-            <div class="section">
-                <h3 class="section-title">Accuracy &amp; Reliability</h3>
-                <p>In terms of the Service Provider's responsibility for your use of the application, it is important to note that while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to provide information to them so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the application.</p>
-            </div>
-
-            <!-- Updates & Termination -->
-            <div class="section">
-                <h3 class="section-title">Updates &amp; Termination</h3>
-                <p>The Service Provider may wish to update the application at some point. The application is currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the application to) may change, and you will need to download the updates if you want to continue using the application.</p>
-                
-                <p>The Service Provider does not guarantee that it will always update the application so that it is relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the application when offered to you.</p>
-                
-                <p>The Service Provider may also wish to cease providing the application and may terminate its use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination:</p>
-                
-                <ul>
-                    <li>The rights and licenses granted to you in these terms will end</li>
-                    <li>You must cease using the application, and (if necessary) delete it from your device</li>
-                </ul>
-            </div>
-
-            <!-- Changes to Terms -->
-            <div class="section">
-                <h3 class="section-title">Changes to These Terms and Conditions</h3>
-                <p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.</p>
-            </div>
+        <!-- Agreement -->
+        <div class="section">
+          <div class="warning-box">
+            <h4 style="color: #d32f2f; margin-bottom: 12px">
+              ⚠️ Important Agreement
+            </h4>
+            <p>
+              Upon downloading or utilizing the Application, you are
+              automatically agreeing to the following terms. It is strongly
+              advised that you thoroughly read and understand these terms prior
+              to using the Application.
+            </p>
+          </div>
         </div>
 
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h3>Contact Us</h3>
-            <p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider:</p>
-            <a href="mailto:smitsakariya2001@gmail.com">smitsakariya2001@gmail.com</a>
+        <!-- Intellectual Property -->
+        <div class="section">
+          <h3 class="section-title">Intellectual Property</h3>
+          <p>
+            Unauthorized copying, modification of the Application, any part of
+            the Application, or our trademarks is strictly prohibited. Any
+            attempts to extract the source code of the Application, translate
+            the Application into other languages, or create derivative versions
+            are not permitted. All trademarks, copyrights, database rights, and
+            other intellectual property rights related to the Application remain
+            the property of the Service Provider.
+          </p>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2026 WeAds - Together we soar</p>
-            <p style="margin-top: 8px; font-size: 12px;">This Terms and Conditions page was generated by <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">App Privacy Policy Generator</a></p>
+        <!-- Service Modifications -->
+        <div class="section">
+          <h3 class="section-title">Service Modifications</h3>
+          <p>
+            The Service Provider is dedicated to ensuring that the Application
+            is as beneficial and efficient as possible. As such, they reserve
+            the right to modify the Application or charge for their services at
+            any time and for any reason. The Service Provider assures you that
+            any charges for the Application or its services will be clearly
+            communicated to you.
+          </p>
         </div>
+
+        <!-- Data Security -->
+        <div class="section">
+          <h3 class="section-title">Data Security &amp; Device Safety</h3>
+          <p>
+            The Application stores and processes personal data that you have
+            provided to the Service Provider in order to provide the Service. It
+            is your responsibility to maintain the security of your phone and
+            access to the Application.
+          </p>
+
+          <div class="alert-box">
+            <h4 style="color: #e65100; margin-bottom: 12px">
+              ⚡ Device Security Warning
+            </h4>
+            <p>
+              The Service Provider strongly advises against jailbreaking or
+              rooting your phone, which involves removing software restrictions
+              and limitations imposed by the official operating system of your
+              device. Such actions could:
+            </p>
+            <ul>
+              <li>Expose your phone to malware and viruses</li>
+              <li>Introduce malicious programs</li>
+              <li>Compromise your phone's security features</li>
+              <li>
+                May result in the Application not functioning correctly or at
+                all
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Third Party Services -->
+        <div class="section">
+          <h3 class="section-title">Third-Party Services</h3>
+          <div class="info-box">
+            <h4 style="color: #388e3c; margin-bottom: 12px">
+              🔗 External Services
+            </h4>
+            <p>
+              Please note that the Application utilizes third-party services
+              that have their own Terms and Conditions. Below are the links to
+              the Terms and Conditions of the third-party service providers used
+              by the Application:
+            </p>
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.google.com/analytics/terms/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google Analytics for Firebase</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://firebase.google.com/terms/crashlytics"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Firebase Crashlytics</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Internet Connection -->
+        <div class="section">
+          <h3 class="section-title">Internet Connection Requirements</h3>
+          <p>
+            Please be aware that the Service Provider does not assume
+            responsibility for certain aspects. Some functions of the
+            Application require an active internet connection, which can be
+            Wi-Fi or provided by your mobile network provider. The Service
+            Provider cannot be held responsible if the Application does not
+            function at full capacity due to lack of access to Wi-Fi or if you
+            have exhausted your data allowance.
+          </p>
+
+          <div class="highlight-box">
+            <h4 style="color: #f57c00; margin-bottom: 12px">
+              📱 Data Usage Notice
+            </h4>
+            <p>
+              If you are using the application outside of a Wi-Fi area, please
+              be aware that your mobile network provider's agreement terms still
+              apply. Consequently, you may incur charges from your mobile
+              provider for:
+            </p>
+            <ul>
+              <li>Data usage during the connection to the application</li>
+              <li>Other third-party charges</li>
+              <li>
+                Roaming data charges if you use the application outside of your
+                home territory (i.e., region or country) without disabling data
+                roaming
+              </li>
+            </ul>
+            <p style="margin-top: 12px">
+              <strong
+                >By using the application, you accept responsibility for any
+                such charges.</strong
+              >
+              If you are not the bill payer for the device on which you are
+              using the application, it is assumed that you have obtained
+              permission from the bill payer.
+            </p>
+          </div>
+        </div>
+
+        <!-- Device Responsibility -->
+        <div class="section">
+          <h3 class="section-title">Device Responsibility</h3>
+          <p>
+            Similarly, the Service Provider cannot always assume responsibility
+            for your usage of the application. For instance, it is your
+            responsibility to ensure that your device remains charged. If your
+            device runs out of battery and you are unable to access the Service,
+            the Service Provider cannot be held responsible.
+          </p>
+        </div>
+
+        <!-- Accuracy & Reliability -->
+        <div class="section">
+          <h3 class="section-title">Accuracy &amp; Reliability</h3>
+          <p>
+            In terms of the Service Provider's responsibility for your use of
+            the application, it is important to note that while they strive to
+            ensure that it is updated and accurate at all times, they do rely on
+            third parties to provide information to them so that they can make
+            it available to you. The Service Provider accepts no liability for
+            any loss, direct or indirect, that you experience as a result of
+            relying entirely on this functionality of the application.
+          </p>
+        </div>
+
+        <!-- Updates & Termination -->
+        <div class="section">
+          <h3 class="section-title">Updates &amp; Termination</h3>
+          <p>
+            The Service Provider may wish to update the application at some
+            point. The application is currently available as per the
+            requirements for the operating system (and for any additional
+            systems they decide to extend the availability of the application
+            to) may change, and you will need to download the updates if you
+            want to continue using the application.
+          </p>
+
+          <p>
+            The Service Provider does not guarantee that it will always update
+            the application so that it is relevant to you and/or compatible with
+            the particular operating system version installed on your device.
+            However, you agree to always accept updates to the application when
+            offered to you.
+          </p>
+
+          <p>
+            The Service Provider may also wish to cease providing the
+            application and may terminate its use at any time without providing
+            termination notice to you. Unless they inform you otherwise, upon
+            any termination:
+          </p>
+
+          <ul>
+            <li>
+              The rights and licenses granted to you in these terms will end
+            </li>
+            <li>
+              You must cease using the application, and (if necessary) delete it
+              from your device
+            </li>
+          </ul>
+        </div>
+
+        <!-- Changes to Terms -->
+        <div class="section">
+          <h3 class="section-title">Changes to These Terms and Conditions</h3>
+          <p>
+            The Service Provider may periodically update their Terms and
+            Conditions. Therefore, you are advised to review this page regularly
+            for any changes. The Service Provider will notify you of any changes
+            by posting the new Terms and Conditions on this page.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact-section">
+        <h3>Contact Us</h3>
+        <p>
+          If you have any questions or suggestions about the Terms and
+          Conditions, please do not hesitate to contact the Service Provider:
+        </p>
+        <a href="mailto:smitsakariya2001@gmail.com"
+          >smitsakariya2001@gmail.com</a
+        >
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2026 WeAds - Together we soar</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
