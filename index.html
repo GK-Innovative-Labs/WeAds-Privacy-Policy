@@ -1,420 +1,552 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeAds - Privacy Policy</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        :root {
-            --primary-color: #00ACC1;
-            --primary-dark: #00838F;
-            --secondary-color: #FF6B6B;
-            --text-dark: #212121;
-            --text-light: #757575;
-            --bg-light: #F5F5F5;
-            --white: #FFFFFF;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
+      :root {
+        --primary-color: #00acc1;
+        --primary-dark: #00838f;
+        --secondary-color: #ff6b6b;
+        --text-dark: #212121;
+        --text-light: #757575;
+        --bg-light: #f5f5f5;
+        --white: #ffffff;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
 
+      body {
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f7fa 0%, #f5f5f5 100%);
+        color: var(--text-dark);
+        line-height: 1.6;
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        background: var(--primary-color);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .app-name {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--text-dark);
+      }
+
+      .tagline {
+        color: var(--text-light);
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      /* Main Content */
+      .content-card {
+        background: var(--white);
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid var(--primary-color);
+        display: inline-block;
+      }
+
+      .intro-text {
+        background: linear-gradient(135deg, #e0f7fa 0%, #f0f4f8 100%);
+        padding: 20px;
+        border-radius: 12px;
+        border-left: 4px solid var(--primary-color);
+        margin-bottom: 24px;
+        font-size: 15px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: var(--text-dark);
+        font-size: 15px;
+      }
+
+      /* Lists */
+      ul {
+        list-style: none;
+        margin: 16px 0;
+      }
+
+      ul li {
+        padding: 12px 0 12px 32px;
+        position: relative;
+        color: var(--text-dark);
+        font-size: 15px;
+      }
+
+      ul li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      /* Highlight boxes */
+      .highlight-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .info-box {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .warning-box {
+        background: #ffebee;
+        border-left: 4px solid var(--secondary-color);
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      /* Links */
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
+      /* Contact section */
+      .contact-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--primary-dark) 100%
+        );
+        color: var(--white);
+        padding: 32px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: var(--shadow-hover);
+        margin-top: 24px;
+      }
+
+      .contact-section h3 {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+
+      .contact-section a {
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.2);
+        padding: 12px 24px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-section a:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        text-decoration: none;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 24px;
+        color: var(--text-light);
+        font-size: 14px;
+      }
+
+      /* Effective date badge */
+      .effective-date {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 16px 0;
+      }
+
+      /* Category tags (like in the app) */
+      .tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+      }
+
+      .tag {
+        background: var(--bg-light);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: var(--text-dark);
+        border: 1px solid #e0e0e0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
         body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #E0F7FA 0%, #F5F5F5 100%);
-            color: var(--text-dark);
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
+          padding: 12px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
+        .content-card {
+          padding: 20px;
         }
 
-        /* Header */
         .header {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--white);
-            box-shadow: var(--shadow);
+          padding: 20px;
         }
 
         .app-name {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--text-dark);
+          font-size: 24px;
         }
 
-        .tagline {
-            color: var(--text-light);
-            font-size: 16px;
-            margin-top: 8px;
-        }
-
-        /* Main Content */
-        .content-card {
-            background: var(--white);
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            margin-bottom: 20px;
+        .logo {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
         }
 
         .section-title {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 3px solid var(--primary-color);
-            display: inline-block;
+          font-size: 20px;
         }
+      }
 
-        .intro-text {
-            background: linear-gradient(135deg, #E0F7FA 0%, #F0F4F8 100%);
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 24px;
-            font-size: 15px;
-        }
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
 
-        p {
-            margin-bottom: 16px;
-            color: var(--text-dark);
-            font-size: 15px;
-        }
-
-        /* Lists */
-        ul {
-            list-style: none;
-            margin: 16px 0;
-        }
-
-        ul li {
-            padding: 12px 0 12px 32px;
-            position: relative;
-            color: var(--text-dark);
-            font-size: 15px;
-        }
-
-        ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        /* Highlight boxes */
-        .highlight-box {
-            background: #FFF9E6;
-            border-left: 4px solid #FFC107;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        .info-box {
-            background: #E8F5E9;
-            border-left: 4px solid #4CAF50;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        .warning-box {
-            background: #FFEBEE;
-            border-left: 4px solid var(--secondary-color);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        /* Links */
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
-        }
-
-        /* Contact section */
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 32px;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-hover);
-            margin-top: 24px;
-        }
-
-        .contact-section h3 {
-            margin-bottom: 12px;
-            font-size: 24px;
-        }
-
-        .contact-section a {
-            color: var(--white);
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-section a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 24px;
-            color: var(--text-light);
-            font-size: 14px;
-        }
-
-        /* Effective date badge */
-        .effective-date {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 8px 20px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 500;
-            margin: 16px 0;
-        }
-
-        /* Category tags (like in the app) */
-        .tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin: 16px 0;
-        }
-
-        .tag {
-            background: var(--bg-light);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            color: var(--text-dark);
-            border: 1px solid #E0E0E0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 12px;
-            }
-
-            .content-card {
-                padding: 20px;
-            }
-
-            .header {
-                padding: 20px;
-            }
-
-            .app-name {
-                font-size: 24px;
-            }
-
-            .logo {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-
-            .section-title {
-                font-size: 20px;
-            }
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Section spacing */
-        .section {
-            margin-bottom: 32px;
-        }
+      /* Section spacing */
+      .section {
+        margin-bottom: 32px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo-section">
-                <div class="logo">W</div>
-                <h1 class="app-name">WeAds</h1>
-            </div>
-            <p class="tagline">Together we soar</p>
-            <div class="tags">
-                <span class="tag">Privacy</span>
-                <span class="tag">Security</span>
-                <span class="tag">Transparency</span>
-            </div>
+      <!-- Header -->
+      <div class="header">
+        <div class="logo-section">
+          <div class="logo">W</div>
+          <h1 class="app-name">WeAds</h1>
+        </div>
+        <p class="tagline">Together we soar</p>
+        <div class="tags">
+          <span class="tag">Privacy</span>
+          <span class="tag">Security</span>
+          <span class="tag">Transparency</span>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content-card">
+        <h2 class="section-title">Privacy Policy</h2>
+
+        <div class="intro-text">
+          This privacy policy applies to the <strong>WeAds</strong> app (hereby
+          referred to as "Application") for mobile devices that was created by
+          Smit Sakariya (hereby referred to as "Service Provider") as a Free
+          service. This service is intended for use "AS IS".
         </div>
 
-        <!-- Main Content -->
-        <div class="content-card">
-            <h2 class="section-title">Privacy Policy</h2>
-            
-            <div class="intro-text">
-                This privacy policy applies to the <strong>WeAds</strong> app (hereby referred to as "Application") for mobile devices that was created by Smit Sakariya (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".
-            </div>
+        <div class="effective-date">Effective as of February 1, 2026</div>
 
-            <div class="effective-date">Effective as of February 1, 2026</div>
+        <!-- Information Collection -->
+        <div class="section">
+          <h3 class="section-title">Information Collection and Use</h3>
+          <p>
+            The Application collects information when you download and use it.
+            This information may include:
+          </p>
 
-            <!-- Information Collection -->
-            <div class="section">
-                <h3 class="section-title">Information Collection and Use</h3>
-                <p>The Application collects information when you download and use it. This information may include:</p>
-                
-                <ul>
-                    <li>Your device's Internet Protocol address (e.g. IP address)</li>
-                    <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
-                    <li>The time spent on the Application</li>
-                    <li>The operating system you use on your mobile device</li>
-                </ul>
+          <ul>
+            <li>Your device's Internet Protocol address (e.g. IP address)</li>
+            <li>
+              The pages of the Application that you visit, the time and date of
+              your visit, the time spent on those pages
+            </li>
+            <li>The time spent on the Application</li>
+            <li>The operating system you use on your mobile device</li>
+          </ul>
 
-                <div class="highlight-box">
-                    <h4 style="color: #F57C00; margin-bottom: 12px;">📍 Location Services</h4>
-                    <p>The Application collects your device's location, which helps the Service Provider determine your approximate geographical location and make use of it in the following ways:</p>
-                    
-                    <ul>
-                        <li><strong>Geolocation Services:</strong> The Service Provider utilizes location data to provide features such as personalized content, relevant recommendations, and location-based services.</li>
-                        <li><strong>Analytics and Improvements:</strong> Aggregated and anonymized location data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application.</li>
-                        <li><strong>Third-Party Services:</strong> Periodically, the Service Provider may transmit anonymized location data to external services. These services assist them in enhancing the Application and optimizing their offerings.</li>
-                    </ul>
-                </div>
+          <div class="highlight-box">
+            <h4 style="color: #f57c00; margin-bottom: 12px">
+              📍 Location Services
+            </h4>
+            <p>
+              The Application collects your device's location, which helps the
+              Service Provider determine your approximate geographical location
+              and make use of it in the following ways:
+            </p>
 
-                <p>The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.</p>
-                
-                <p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information. The information that the Service Provider requests will be retained by them and used as described in this privacy policy.</p>
-            </div>
+            <ul>
+              <li>
+                <strong>Geolocation Services:</strong> The Service Provider
+                utilizes location data to provide features such as personalized
+                content, relevant recommendations, and location-based services.
+              </li>
+              <li>
+                <strong>Analytics and Improvements:</strong> Aggregated and
+                anonymized location data helps the Service Provider to analyze
+                user behavior, identify trends, and improve the overall
+                performance and functionality of the Application.
+              </li>
+              <li>
+                <strong>Third-Party Services:</strong> Periodically, the Service
+                Provider may transmit anonymized location data to external
+                services. These services assist them in enhancing the
+                Application and optimizing their offerings.
+              </li>
+            </ul>
+          </div>
 
-            <!-- Third Party Access -->
-            <div class="section">
-                <h3 class="section-title">Third Party Access</h3>
-                <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+          <p>
+            The Service Provider may use the information you provided to contact
+            you from time to time to provide you with important information,
+            required notices and marketing promotions.
+          </p>
 
-                <div class="info-box">
-                    <h4 style="color: #388E3C; margin-bottom: 12px;">🔗 Third-Party Services</h4>
-                    <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
-                    
-                    <ul>
-                        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
-                        <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
-                    </ul>
-                </div>
-
-                <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
-                
-                <ul>
-                    <li>As required by law, such as to comply with a subpoena, or similar legal process</li>
-                    <li>When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request</li>
-                    <li>With their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement</li>
-                </ul>
-            </div>
-
-            <!-- Opt-Out Rights -->
-            <div class="section">
-                <h3 class="section-title">Opt-Out Rights</h3>
-                <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
-            </div>
-
-            <!-- Data Retention -->
-            <div class="section">
-                <h3 class="section-title">Data Retention Policy</h3>
-                <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:smitsakariya2001@gmail.com">smitsakariya2001@gmail.com</a> and they will respond in a reasonable time.</p>
-            </div>
-
-            <!-- Children -->
-            <div class="section">
-                <h3 class="section-title">Children</h3>
-                <div class="warning-box">
-                    <h4 style="color: #D32F2F; margin-bottom: 12px;">⚠️ Age Restriction</h4>
-                    <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
-                    
-                    <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discovers that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider at <a href="mailto:smitsakariya2001@gmail.com">smitsakariya2001@gmail.com</a> so that they will be able to take the necessary actions.</p>
-                </div>
-            </div>
-
-            <!-- Security -->
-            <div class="section">
-                <h3 class="section-title">Security</h3>
-                <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
-            </div>
-
-            <!-- Changes -->
-            <div class="section">
-                <h3 class="section-title">Changes</h3>
-                <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
-            </div>
-
-            <!-- Your Consent -->
-            <div class="section">
-                <h3 class="section-title">Your Consent</h3>
-                <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
-            </div>
+          <p>
+            For a better experience, while using the Application, the Service
+            Provider may require you to provide us with certain personally
+            identifiable information. The information that the Service Provider
+            requests will be retained by them and used as described in this
+            privacy policy.
+          </p>
         </div>
 
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h3>Contact Us</h3>
-            <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider:</p>
-            <a href="mailto:smitsakariya2001@gmail.com">smitsakariya2001@gmail.com</a>
+        <!-- Third Party Access -->
+        <div class="section">
+          <h3 class="section-title">Third Party Access</h3>
+          <p>
+            Only aggregated, anonymized data is periodically transmitted to
+            external services to aid the Service Provider in improving the
+            Application and their service. The Service Provider may share your
+            information with third parties in the ways that are described in
+            this privacy statement.
+          </p>
+
+          <div class="info-box">
+            <h4 style="color: #388e3c; margin-bottom: 12px">
+              🔗 Third-Party Services
+            </h4>
+            <p>
+              Please note that the Application utilizes third-party services
+              that have their own Privacy Policy about handling data. Below are
+              the links to the Privacy Policy of the third-party service
+              providers used by the Application:
+            </p>
+
+            <ul>
+              <li>
+                <a
+                  href="https://firebase.google.com/support/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google Analytics for Firebase</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://firebase.google.com/support/privacy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Firebase Crashlytics</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            The Service Provider may disclose User Provided and Automatically
+            Collected Information:
+          </p>
+
+          <ul>
+            <li>
+              As required by law, such as to comply with a subpoena, or similar
+              legal process
+            </li>
+            <li>
+              When they believe in good faith that disclosure is necessary to
+              protect their rights, protect your safety or the safety of others,
+              investigate fraud, or respond to a government request
+            </li>
+            <li>
+              With their trusted services providers who work on their behalf, do
+              not have an independent use of the information we disclose to
+              them, and have agreed to adhere to the rules set forth in this
+              privacy statement
+            </li>
+          </ul>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2026 WeAds - Together we soar</p>
+        <!-- Opt-Out Rights -->
+        <div class="section">
+          <h3 class="section-title">Opt-Out Rights</h3>
+          <p>
+            You can stop all collection of information by the Application easily
+            by uninstalling it. You may use the standard uninstall processes as
+            may be available as part of your mobile device or via the mobile
+            application marketplace or network.
+          </p>
         </div>
+
+        <!-- Data Retention -->
+        <div class="section">
+          <h3 class="section-title">Data Retention Policy</h3>
+          <p>
+            The Service Provider will retain User Provided data for as long as
+            you use the Application and for a reasonable time thereafter. If
+            you'd like them to delete User Provided Data that you have provided
+            via the Application, please contact them at
+            <a href="mailto:support@weads.info">support@weads.info</a> and they
+            will respond in a reasonable time.
+          </p>
+        </div>
+
+        <!-- Children -->
+        <div class="section">
+          <h3 class="section-title">Children</h3>
+          <div class="warning-box">
+            <h4 style="color: #d32f2f; margin-bottom: 12px">
+              ⚠️ Age Restriction
+            </h4>
+            <p>
+              The Service Provider does not use the Application to knowingly
+              solicit data from or market to children under the age of 13.
+            </p>
+
+            <p>
+              The Application does not address anyone under the age of 13. The
+              Service Provider does not knowingly collect personally
+              identifiable information from children under 13 years of age. In
+              the case the Service Provider discovers that a child under 13 has
+              provided personal information, the Service Provider will
+              immediately delete this from their servers. If you are a parent or
+              guardian and you are aware that your child has provided us with
+              personal information, please contact the Service Provider at
+              <a href="mailto:support@weads.info">support@weads.info</a> so that
+              they will be able to take the necessary actions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="section">
+          <h3 class="section-title">Security</h3>
+          <p>
+            The Service Provider is concerned about safeguarding the
+            confidentiality of your information. The Service Provider provides
+            physical, electronic, and procedural safeguards to protect
+            information the Service Provider processes and maintains.
+          </p>
+        </div>
+
+        <!-- Changes -->
+        <div class="section">
+          <h3 class="section-title">Changes</h3>
+          <p>
+            This Privacy Policy may be updated from time to time for any reason.
+            The Service Provider will notify you of any changes to the Privacy
+            Policy by updating this page with the new Privacy Policy. You are
+            advised to consult this Privacy Policy regularly for any changes, as
+            continued use is deemed approval of all changes.
+          </p>
+        </div>
+
+        <!-- Your Consent -->
+        <div class="section">
+          <h3 class="section-title">Your Consent</h3>
+          <p>
+            By using the Application, you are consenting to the processing of
+            your information as set forth in this Privacy Policy now and as
+            amended by us.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact-section">
+        <h3>Contact Us</h3>
+        <p>
+          If you have any questions regarding privacy while using the
+          Application, or have questions about the practices, please contact the
+          Service Provider:
+        </p>
+        <a href="mailto:support@weads.info">support@weads.info</a>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2026 WeAds - Together we soar</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
