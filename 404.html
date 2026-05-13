@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeAds - Page Not Found</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #00acc1;
+        --primary-dark: #00838f;
+        --secondary-color: #ff6b6b;
+        --text-dark: #212121;
+        --text-light: #757575;
+        --bg-light: #f5f5f5;
+        --white: #ffffff;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f7fa 0%, #f5f5f5 100%);
+        color: var(--text-dark);
+        line-height: 1.6;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .header {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        margin-bottom: 24px;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 16px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .error-code {
+        font-size: 72px;
+        font-weight: 700;
+        color: var(--primary-color);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .error-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 12px;
+      }
+
+      .error-message {
+        color: var(--text-light);
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        background: var(--primary-color);
+        color: var(--white);
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+        color: var(--white);
+        text-decoration: none;
+      }
+
+      .nav-link.secondary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+      }
+
+      .nav-link.secondary:hover {
+        background: var(--primary-color);
+        color: var(--white);
+      }
+
+      .footer {
+        margin-top: 24px;
+        color: var(--text-light);
+        font-size: 14px;
+      }
+
+      @media (max-width: 480px) {
+        .error-code {
+          font-size: 56px;
+        }
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+        }
+        .nav-link {
+          width: 100%;
+          max-width: 280px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="/white_logo.svg" alt="WeAds Logo" />
+        </div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">
+          The page you're looking for doesn't exist or may have been moved.
+        </p>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Privacy Policy</a>
+          <a href="/terms-and-conditions" class="nav-link secondary">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="footer">
+        <p>© 2026 WeAds &mdash; <a href="mailto:support@weads.info" style="color: var(--primary-color);">support@weads.info</a></p>
+      </div>
+    </div>
+  </body>
+</html>
