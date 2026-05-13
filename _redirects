@@ -1,0 +1,6 @@
+/privacy              /index.html           200
+/privacy-policy       /index.html           200
+/terms                /terms-and-conditions 301
+/terms-of-service     /terms-and-conditions 301
+/tos                  /terms-and-conditions 301
+/                     /index.html           200
